@@ -3,18 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return Inertia::render('Index');
 });
-
+Route::get('/our-projects', function () {
+    return Inertia::render('Projects/Index');
+});
+Route::get('/what-we-do', function () {
+    return Inertia::render('Do/Index');
+});
+Route::get('/about-integral', function () {
+    return Inertia::render('About/Index');
+});
+Route::get('/contact-us', function () {
+    return Inertia::render('Contact/Index');
+});
